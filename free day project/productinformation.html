@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Roboto', sans-serif;
+       }
+       body{
+           width: 100%;
+           min-height: 300vh;
+           border-left: 1px solid transparent;
+           border-right: 1px solid transparent; 
+           border-top: 1px solid #ff8e06;
+           border-bottom: 1px solid black;
+           /* margin-left: 0.5vw; */
+       }
+       .firstnavbar{
+           width: 100%;
+           height: 8vh;
+            border: 1px solid #ff8e06; 
+           display: flex;
+           background-color: #ff8e06;
+           text-align: center;
+           font-size: 1.4vw;
+       }
+       .mainnavbar{
+           width: 100%;
+           height: 13vh;
+            border: 1px solid transparent;
+           display: flex;
+           background-color: #ffffff;
+       }
+       .mainnavbar ul{
+           display: flex;
+           margin: 0;
+           padding: 0;
+
+       }
+       .mainnavbar ul li
+       {
+           margin-left: 1vw;
+           list-style: none;
+           margin-left: 4vw;
+           margin-top: 4.5vh;
+           font-weight: 549;
+           font-size: 1.4vw;
+
+       }
+       .mainnavbar ul li a:hover
+       {
+           color: red;
+       }
+       .mainnavbar ul li:first-child{
+           margin-left: 50vw;
+       }
+       .mainnavbar ul li:first-child a:hover{
+           color: blueviolet;
+       }
+       #banner
+       {
+           width: 100%;
+           height: 21vh;
+           background-color: #f5f5f5;
+           
+         
+          
+       }
+       .mainproductcontainer{
+           width: 100%;
+           height: 100vh;
+           display: flex;
+           border: 0.1vw solid transparent;
+       }
+       #imageboxes{
+           width: 34vw;
+           height: 79vh;
+           border: 0.1vw solid transparent;
+           margin-top: 11vh;
+           margin-left: 2.5vw; 
+          
+       }
+       #textboxes{
+           width: 55vw;
+           height: 95vh;
+           border: 0.1vw solid transparent;
+            margin-top: 5vh;
+           margin-left: 3vw; 
+           
+       }
+       .imag{
+           width: 100%;
+           height: 100%;
+       }
+       .bannercontainer{
+           width: 80vw;
+           height: 15vh;
+           border: 0.1vw solid transparent;
+       }
+       .bannertext{
+           font-size: 2.8vw;
+           font-family: 'Roboto', sans-serif;
+            /* position: relative;
+           top: 7vh;
+           left: 4.5vw;  */
+           font-weight: 400;
+           margin-top: 7vh;
+           margin-left: 4.5vw;
+          
+       }
+       .bannertext:hover{
+           color: #ff8e06;
+       }
+       .containertext{
+        font-family: 'Roboto', sans-serif;
+           font-size: 2.4vw;
+           position: relative;
+           top: 2vh;
+           left: 0.8vw;
+           font-weight: bold;
+       }
+       .textborder{
+           width: 100%;
+           height: 0.1vh;
+           background-color: #cecece;
+           margin-top: 9vh;
+       }
+       .prices{
+           font-size: 2.7vw;
+           font-weight: bold;
+           color: #388e3c;
+           position: relative;
+           top: 4vh;
+           left: 2vw;
+
+       }
+       .prices:hover{
+           color: #ff8e06;
+       }
+       .sampletext{
+           margin-top: 11vh;
+           margin-left: 4vw;
+           word-spacing: 23.2vw;
+       }
+       .sampletext1{
+           margin-top: 3vh;
+           margin-left: 4vw;
+           word-spacing: 25vw;
+       }
+       .sampletext2{
+           margin-top: 3vh;
+           margin-left: 4vw;
+           word-spacing: 21vw;
+       }
+       .sampleborder{
+           width: 90%;
+           height: 0.1vh;
+           background-color: #cecece;
+          
+           margin: auto;
+           margin-top: 3vh;
+       }
+       .sampleborder4{
+           width: 90%;
+           height: 0.1vh;
+           background-color: #cecece;
+           
+           margin: auto;
+           margin-top: 8vh;
+       }
+       .addtocart{
+           width: 14vw;
+           height: 7vh;
+           background-color: #ff8e06 ;
+           border: 0.1vw solid #ff8e06;
+           border-radius: 3.8vw;
+           color: white;
+           font-size: 1.3vw;
+           margin-top: 9vh;
+           margin-left: 5vw;
+       }
+       .addtocart:hover{
+           background-color: #388e3c;
+           border: 0.1vw solid #388e3c;
+       }
+       .disborder{
+        width: 97%;
+           height: 0.13vh;
+           background-color: #cecece;
+          
+           margin: auto;
+           margin-top: 15vh;
+       }
+       .futtor{
+            width: 100%;
+            height: 80vh;
+            border: 0.1vw solid transparent;
+            margin-top: 4vh;
+            background-color: #ff8e06;
+            display: inline-flex;
+        }
+        .firstcolumnfutter{
+            width: 22vw;
+            height: 55vh;
+            border: 0.1vw solid transparent;
+            margin-top: 6vh;
+            margin-left: 4vw;
+        }
+        .firstcolumnfutterimg{
+            height: 24vh;
+            width: 90%;
+            border: 0.1vw solid transparent;
+        }
+        .firstcolumnfutterimg img{
+            width: 100%;
+            height: 100%;
+        }
+        .firstcolumnfuttertext{
+            height: 20vh;
+            width: 19vw;
+            margin-top: 3vh;
+            text-align: left;
+            margin-left: 0.5vw;
+            font-size: 1.4vw;
+        }
+        .secondcolumnfutter{
+            width: 21vw;
+            height: 68vh;
+            margin-top: 6vh;
+            margin-left: 3vw;
+            border: 0.1vw solid transparent;
+            color: white;
+            font-size: 1.4vw;
+           
+        }
+        .futterborder{
+            width: 0.3vw;
+            height: 3vh;
+            background-color: #ff8e06;
+        }
+        .secondcolumnfutter p{
+            font-size: 1.4vw;
+            font-family: 'Roboto', sans-serif;
+          
+        }
+        .futtertitle{
+            display: inline-flex;
+            font-size: 1.4vw;
+        }
+        .listfutter{
+            width: 20vw;
+            height: 60vh;
+            font-size: 1.4vw;
+
+        }
+        .listfutter ul
+        {
+            margin-left: 4.5vh;
+            font-size: 1.4vw;
+        }
+        .listfutter ul li{
+            margin-bottom: 2.5vh;
+            font-size: 1.4vw;
+        }
+        .listfutter ul li:first-child{
+            margin-top: 3vh;
+            font-size: 1.4vw;
+        }
+        .thirdcolumnfutter{
+            width: 21vw;
+            height: 68vh;
+            margin-top: 6vh;
+            margin-left: 0vw;
+            border: 0.1vw solid transparent;
+            color: white;
+            font-size: 1.4vw;
+           
+        }
+        .thirdcolumnfutter p{
+            font-size: 1.4vw;
+            font-family: 'Roboto', sans-serif;
+          
+        }
+        .fourthcolumnfutter{
+            width: 21vw;
+            height: 68vh;
+            margin-top: 6vh;
+            margin-left: 3vw;
+            border: 0.1vw solid transparent;
+            color: white;
+            font-size: 1.4vw;
+           
+        }
+        .fourthcolumnfutter p{
+            font-size: 1.4vw;
+            font-family: 'Roboto', sans-serif;
+          
+        }
+        .listfutter3 ul li{
+           
+            color: black;
+            font-size: 1.4vw;
+            list-style: none;
+           
+        }
+        .listfutter3 ul
+        {
+            margin-left: 5.2vh;
+            font-size: 1.4vw;
+        }
+        .listfutter3 ul li{
+            margin-bottom: 4vh;
+            font-size: 1.4vw;
+        }
+        .listfutter3 ul li:first-child{
+            margin-top: 4.5vh;
+            font-size: 1.4vw;
+        }
+        .copyright{
+            width: 100%;
+            height: 7vh;
+            background-color: #000000;
+            text-align: center;
+            color: white;
+        }
+        .copyright p{
+            position: relative;
+            font-size: 1.5vw;
+            top: 1.8vh;
+            font-family: 'Roboto', sans-serif;
+        }
+        #hom{
+                color: black;
+            }
+            #hom:hover{
+                color: blueviolet;
+            }
+            .mainnavbar ul li a
+        {
+            color: black;
+        }
+</style>
+</head>
+<body>
+    <div class="firstnavbar">
+        <span style="color:white; margin-left: 6vw; margin-top: 1.7vh; font-weight:530;">contact</span> <span style=" margin-left: 2.5vw; color: white; margin-top: 1.6vh; font-weight: 530;"><a style="text-decoration: none;color: white;" href="myaccount.html">My accout</a></span> <div class="icon1" style="margin-top: 1.9vh; margin-left: 3vw" ><img src="https://img.icons8.com/external-nawicon-glyph-nawicon/17/000000/external-email-communication-nawicon-glyph-nawicon.png"/></div><span style="margin-top: 1.6vh; margin-left: 0.4vw; ">aausafalam585@gmail.com</span>          <div class="border1" style="width: 0.15vw; height: 2.7vh; background-color: black; margin-top: 2.3vh; margin-left: 0.5vw;"></div> <div class="icon2" style="margin-top: 1.8vh; margin-left: 0.5vw; "><img src="https://img.icons8.com/windows/17/000000/phone-disconnected--v1.png"/></div> <span style="margin-top: 1.6vh; margin-left: 0.2vw;">7033432213</span>
+          <div class="twitter" style="margin-top: 1.6vh; margin-left: 31vw;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            width="18" height="18"
+            viewBox="0 0 172 172"
+            style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M160.53333,39.77213c-5.4868,2.43667 -11.38067,4.0764 -17.56693,4.816c6.31813,-3.784 11.1628,-9.77533 13.44467,-16.91907c-5.90533,3.50307 -12.4528,6.04867 -19.42453,7.42467c-5.57853,-5.94547 -13.52493,-9.66067 -22.31987,-9.66067c-16.8904,0 -30.5816,13.69693 -30.5816,30.5816c0,2.39653 0.2752,4.73573 0.7912,6.966c-25.41587,-1.2728 -47.94787,-13.4504 -63.038,-31.9576c-2.62587,4.51787 -4.13373,9.7696 -4.13373,15.38253c0,10.60667 5.39507,19.9692 13.59947,25.45027c-5.01093,-0.16053 -9.72947,-1.53653 -13.85173,-3.82413c0,0.13187 0,0.25227 0,0.38413c0,14.82067 10.53787,27.18173 24.53293,29.98533c-2.5628,0.69947 -5.26893,1.07213 -8.06107,1.07213c-1.96653,0 -3.8872,-0.19493 -5.75053,-0.54467c3.89293,12.14893 15.1876,20.99547 28.5692,21.242c-10.46333,8.2044 -23.65,13.09493 -37.98333,13.09493c-2.46533,0 -4.902,-0.14333 -7.29853,-0.43c13.5364,8.67453 29.60693,13.73707 46.88147,13.73707c56.25547,0 87.00907,-46.60053 87.00907,-87.0148c0,-1.3244 -0.02867,-2.64307 -0.086,-3.956c5.97987,-4.3172 11.16853,-9.7008 15.26787,-15.82973z"></path></g></g></svg></div>
+            <div class="facebook" style="margin-top: 1.6vh; margin-left: 1.3vw;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="18" height="18"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,10.32c-41.796,0 -75.68,33.884 -75.68,75.68c0,37.9432 27.95,69.27128 64.36928,74.74432v-54.68568h-18.72392v-19.89352h18.72392v-13.23712c0,-21.91624 10.67776,-31.53792 28.89256,-31.53792c8.72384,0 13.33688,0.64672 15.52128,0.94256v17.36512h-12.42528c-7.73312,0 -10.43352,7.33064 -10.43352,15.59352v10.87384h22.66272l-3.07536,19.89352h-19.58736v54.84736c36.93872,-5.01208 65.43568,-36.59472 65.43568,-74.906c0,-41.796 -33.884,-75.68 -75.68,-75.68z"></path></g></g></svg></div>
+                <div class="instagram" style="margin-top: 1.6vh; margin-left: 1vw;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="18" height="18"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M57.33333,21.5c-19.78717,0 -35.83333,16.04617 -35.83333,35.83333v57.33333c0,19.78717 16.04617,35.83333 35.83333,35.83333h57.33333c19.78717,0 35.83333,-16.04617 35.83333,-35.83333v-57.33333c0,-19.78717 -16.04617,-35.83333 -35.83333,-35.83333zM129,35.83333c3.956,0 7.16667,3.21067 7.16667,7.16667c0,3.956 -3.21067,7.16667 -7.16667,7.16667c-3.956,0 -7.16667,-3.21067 -7.16667,-7.16667c0,-3.956 3.21067,-7.16667 7.16667,-7.16667zM86,50.16667c19.78717,0 35.83333,16.04617 35.83333,35.83333c0,19.78717 -16.04617,35.83333 -35.83333,35.83333c-19.78717,0 -35.83333,-16.04617 -35.83333,-35.83333c0,-19.78717 16.04617,-35.83333 35.83333,-35.83333zM86,64.5c-11.87412,0 -21.5,9.62588 -21.5,21.5c0,11.87412 9.62588,21.5 21.5,21.5c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5z"></path></g></g></svg></div>
+    </div>
+    <div class="mainnavbar">
+        <ul>
+            <li><a id="hom" style="text-decoration: none;" href="#">Home</a>
+            </li>
+            <li><a href="shop.html"style="text-decoration: none;">Shop</a></li>
+            <li><a href="carts.html"style="text-decoration: none;">cart</a></li>
+            <li><a href="myaccount.html"style="text-decoration: none;">My account</a></li>
+            <li style="margin-top: 1.9vh; margin-left: 2vw;"><a href="carts.html"><img src="https://img.icons8.com/material/45/000000/shopping-cart--v1.png"/></a></li>
+            <li id="count" style="margin-left: -0.3vw; background-color: #ff8e06; width: 2vw; height: 4vh; text-align: center; color: white; border: 0.1vh solid #ff8e06; border-radius: 30%;">0</li>
+            <li style="margin-left: 2.5vw;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="20" height="20"
+             viewBox="0 0 172 172"
+             style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#000000"><path d="M74.53333,17.2c-31.59642,0 -57.33333,25.73692 -57.33333,57.33333c0,31.59642 25.73692,57.33333 57.33333,57.33333c13.73998,0 26.35834,-4.87915 36.24766,-12.97839l34.23203,34.23203c1.43802,1.49778 3.5734,2.10113 5.5826,1.57735c2.0092,-0.52378 3.57826,-2.09284 4.10204,-4.10204c0.52378,-2.0092 -0.07957,-4.14458 -1.57735,-5.5826l-34.23203,-34.23203c8.09924,-9.88932 12.97839,-22.50768 12.97839,-36.24766c0,-31.59642 -25.73692,-57.33333 -57.33333,-57.33333zM74.53333,28.66667c25.39937,0 45.86667,20.4673 45.86667,45.86667c0,25.39937 -20.46729,45.86667 -45.86667,45.86667c-25.39937,0 -45.86667,-20.46729 -45.86667,-45.86667c0,-25.39937 20.4673,-45.86667 45.86667,-45.86667z"></path></g></g></svg></li>
+        </ul>
+    </div>
+    <div id="banner">
+
+    </div>
+    <div class="mainproductcontainer">
+        <div id="imageboxes"></div>
+        <div id="textboxes"></div>
+    </div>
+    <div class="disborder"></div>
+    <p style="text-align: center; margin: auto; color: #ff8e06; font-size: 1.4vw; margin-top: 3vh; font-weight: bold; letter-spacing: 0.3vh;">DESCRIPTION</p>
+    <div class="disborder" style="margin-top: 3vh;"></div>
+    <p style="margin-left: 2vw; font-size: 1.9vw; margin-top: 5vh;">Description</p>
+    <p style="margin-left: 2vw; font-size: 1.4vw; margin-top: 4vh; margin-right: 3vw; line-height: 5vh;">Features 😕 Multi-function Chopping Board :The Collapsible Cutting Board Dish Tub will exceed your expectations. Quality and comfort meet here to create the perfect kitchen gadget. ? Storage Basket : It can be use as storage basket, convenience to store the vegetable or fruit, kitchen dish bowl, cooking seasoning, and ice beverages.? Easily to Clean and Drains :The plug drainer bottom lets water drain fast and easy, It could clean vegetable easily, widely used for draining most foods like potatoes, broccoli, green beans, carrots, spinach and other veggies.? Convenient, Comfortable Handle :Designed with your convenience in mind, Sturdy handle for comfortable holding when draining water or moving food. Greatly enhance your effectiveness of kitchen work.? Non-slip Design :Anti-slip standing button pad at bottom on each side, it offer the powerful grip, so it can be placed on any smooth surface when slicing, keep your safe. Size :- Foldable : 40 x 30 x 3 CM. Expanded : 40 x 30 x 14 CM Specification :Material : PP Plastic. Color : Grey & White.Package include : 1 x cutting board</p>
+    <div class="futtor" style="margin-top: 40vh;">
+        <div class="firstcolumnfutter">
+            <div class="firstcolumnfutterimg"><img src="http://trend4u.online/wp-content/uploads/2021/09/maxresdefault-2-300x169.jpg" alt=""></div>
+            <div class="firstcolumnfuttertext">Serving more than 5,000 customers with happiness and kindness since 2018</div>
+        </div>
+        <div class="secondcolumnfutter">
+          <div class="futtertitle">  <p><span><div class="futterborder"></div></span> &nbsp; &nbsp;&nbsp;For Customers</p></div>
+            <div class="listfutter">
+                <ul>
+                    <li>Cart</li>
+                    <li>Checkout</li>
+                    <li>contect</li>
+                    <li>Home</li>
+                    <li>My account</li>
+                    <li>Sample page</li>
+                    <li>Shop</li>
+                    <li>Track My order</li>
+                </ul>
+            </div>
+        </div>
+        <div class="thirdcolumnfutter">
+            <div class="futtertitle">  <p><span><div class="futterborder"></div></span> &nbsp; &nbsp;&nbsp;Quick Link</p></div>
+              <div class="listfutter">
+                  <ul>
+                      <li>Cart</li>
+                      <li>Checkout</li>
+                      <li>contect</li>
+                      <li>Home</li>
+                      <li>My account</li>
+                      <li>Sample page</li>
+                      <li>Shop</li>
+                      <li>Track My order</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="fourthcolumnfutter">
+            <div class="futtertitle">  <p style="margin-left: -1.6vw;" >Contect Info </p></div>
+              <div class="listfutter3">
+                  <ul>
+                      <li><p style="font-weight: bold; font-family: 'Roboto', sans-serif;">Address:</p>
+                        Near Mahadeva Road Ara 802301 Bihar</li>
+                      <li><p style="font-weight: bold; font-family: 'Roboto', sans-serif;">Phone:</p>
+                        +91 70334 32213
+                        </li>
+                      <li><p style="font-weight: bold; font-family: 'Roboto', sans-serif;">Mobile:</p>
+                        +91 70334 32213</li>
+                      <li><p style="font-weight: bold; font-family: 'Roboto', sans-serif;">Email:</p>
+                       <span style="color: white;"> aausafalam 585@gmail.com</span></li>
+                      <li><p style="font-weight: bold; font-family: 'Roboto', sans-serif;">Website:</p>
+                       <span style="color: white;"> examples .online</span></li>
+                      
+                  </ul>
+              </div>
+          </div>
+    </div>
+    <div class="copyright"><p>Copyrights by Aausaf Alam</p></div>
+</body>
+<script>
+    var count = document.getElementById("count")
+    if(localStorage.getItem("addto")=== null){
+        localStorage.setItem("addto",JSON.stringify([]))
+    }
+    var imageboxes = document.getElementById("imageboxes")
+    var textboxes = document.getElementById("textboxes")
+    var banner= document.getElementById("banner")
+    var bannercontainer = document.createElement('div')
+    bannercontainer.setAttribute('class','bannercontainer')
+   
+    var containertext = document.createElement('p')
+    containertext.setAttribute('class','containertext')
+   
+    var bannertext = document.createElement('p')
+    bannertext.setAttribute('class','bannertext')
+    
+    bannercontainer.append(bannertext)
+    banner.append(bannercontainer)
+    var productsinfo = JSON.parse(localStorage.getItem("productpag"))
+    console.log(productsinfo.photo)
+    var imag = document.createElement('img')
+    imageboxes.append(imag)
+    bannertext.innerText = productsinfo.title
+    containertext.innerText = productsinfo.title
+    imag.src = productsinfo.photo
+    imag.setAttribute('class','imag') 
+    var textborder = document.createElement('div')
+    textborder.setAttribute('class','textborder')
+    
+    var prices = document.createElement('p')
+    prices.innerText = `INR `+ productsinfo.price
+    prices.setAttribute('class','prices')
+    var sampletext = document.createElement('p')
+    sampletext.innerText = `Material Paltic`
+    sampletext.setAttribute('class','sampletext')
+    var sampleborder = document.createElement('div')
+    sampleborder.setAttribute('class','sampleborder')
+    var sampletext1 = document.createElement('p')
+    sampletext1.innerText = `Color Multicolor`
+    sampletext1.setAttribute('class','sampletext1')
+    var sampleborder1 = document.createElement('div')
+    sampleborder1.setAttribute('class','sampleborder')
+    var sampletext2 = document.createElement('p')
+    sampletext2.innerText = `Dimensions  Centimeters`
+    sampletext2.setAttribute('class','sampletext2')
+    var sampleborder2 = document.createElement('div')
+    sampleborder2.setAttribute('class','sampleborder')
+    var sampletext3 = document.createElement('p')
+    sampletext3.innerText = `Brand  Generic`
+    sampletext3.setAttribute('class','sampletext1')
+    var sampleborder3 = document.createElement('div')
+    sampleborder3.setAttribute('class','sampleborder')
+    var sampleborder4 = document.createElement('div')
+    sampleborder4.setAttribute('class','sampleborder4')
+    var addtocart = document.createElement('button')
+    addtocart.setAttribute('class','addtocart')
+    addtocart.innerHTML = `ADD TO CART`
+    addtocart.onclick = function(){
+        var cart = JSON.parse(localStorage.getItem("addto"))
+        cart.push(productsinfo)
+        localStorage.setItem("addto",JSON.stringify(cart))
+        updatecount(JSON.parse(localStorage.getItem("addto")))
+    }
+    textboxes.append(containertext,textborder,prices,sampletext,sampleborder,sampletext1,sampleborder1,sampletext2,sampleborder2,sampletext3,sampleborder3,sampleborder4,addtocart)
+    updatecount(JSON.parse(localStorage.getItem("addto")))
+   function updatecount(a)
+    {
+        count.textContent = a.length
+    }
+</script>
+</html>
